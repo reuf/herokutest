@@ -31,6 +31,7 @@
 * **security** it holds the configuration used to encrypt passwords, the module uses [crypto.pbkdf2](http://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback) with salt, iterations and keylen.
 * **isLocalStorage** flag indicates whether or not the storage of files will be locally or in s3. If true, then local storage is used, otherwise, Amazon S3 service will be used for storage.
 * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
+
 # Dependency External Tools and Softwares Setup
 
  Refer to [Setup Guide](https://github.com/topcoderinc/csfv_frontend_module/wiki/Setup-Guide) wiki page.
