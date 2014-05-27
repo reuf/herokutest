@@ -15,18 +15,15 @@
   The application is intended to be easily deployed locally on CentOS, Mac, Ubuntu, and Windows Operating Systems.
 
 ### Depenedencies
- 
- Notable dependencies of these tools are :
+ Notable dependencies of these tools are (Including Developer dependencies - starting from 5.):
  1. Datejs - an open-source JavaScript Date Library [datejs](http://www.datejs.com/)
  2. Memcached client build on top of Node.js - [memcache](https://github.com/3rd-Eden/node-memcached)
  3. JavaScript parser/compressor/beautifier [uglify-js](https://github.com/mishoo/UglifyJS)
  4. UglifyCSS - a port of YUI Compressor to NodeJS - [uglifycss](https://github.com/fmarcia/UglifyCSS)
- 
- Development/Testing dependencies :
- 1. Mocha - a feature-rich JavaScript test framework - [mocha](http://visionmedia.github.io/mocha/)
- 2. Javascript Code Quality Tool - [jshint](http://www.jshint.com/)
- 3. Chai - a BDD / TDD assertion library for node - [chai](http://chaijs.com/)
- 4. JavaScript build tool - [jake](https://github.com/mde/jake)
+ 5. Mocha - a feature-rich JavaScript test framework - [mocha](http://visionmedia.github.io/mocha/)
+ 6. Javascript Code Quality Tool - [jshint](http://www.jshint.com/)
+ 7. Chai - a BDD / TDD assertion library for node - [chai](http://chaijs.com/)
+ 8. JavaScript build tool - [jake](https://github.com/mde/jake)
 
 # Configuration
 All Configuration is bundled in a single file, namely config/configuration.js. This list will explain the various options. Most things will __not__ need to be modified during development.
