@@ -15,7 +15,7 @@
   The application is intended to be easily deployed locally on CentOS, Mac, Ubuntu, and Windows Operating Systems.
 
 ### Depenedencies
- Notable dependencies of utilities module are (Including Developer/Testing dependencies startgin from 5:) :
+ Notable dependencies of utilities module are (Including Developer/Testing dependencies starting from 5.) :
  1. Datejs - an open-source JavaScript Date Library [datejs](http://www.datejs.com/)
  2. Memcached client build on top of Node.js - [memcache](https://github.com/3rd-Eden/node-memcached)
  3. JavaScript parser/compressor/beautifier [uglify-js](https://github.com/mishoo/UglifyJS)
