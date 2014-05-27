@@ -14,7 +14,7 @@
 
   The application is intended to be easily deployed locally on CentOS, Mac, Ubuntu, and Windows Operating Systems.
 
-# Depenedencies
+### Depenedencies
  
  Notable dependencies of these tools are :
  1. Datejs - an open-source JavaScript Date Library [datejs](http://www.datejs.com/)
