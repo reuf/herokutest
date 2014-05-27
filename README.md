@@ -15,24 +15,35 @@
   The application is intended to be easily deployed locally on CentOS, Mac, Ubuntu, and Windows Operating Systems.
 
 ### Depenedencies
- Notable dependencies of these tools are (Including Developer dependencies - starting from 5.):
+ Notable dependencies of these tools are :
  1. Datejs - an open-source JavaScript Date Library [datejs](http://www.datejs.com/)
  2. Memcached client build on top of Node.js - [memcache](https://github.com/3rd-Eden/node-memcached)
  3. JavaScript parser/compressor/beautifier [uglify-js](https://github.com/mishoo/UglifyJS)
  4. UglifyCSS - a port of YUI Compressor to NodeJS - [uglifycss](https://github.com/fmarcia/UglifyCSS)
- 5. Mocha - a feature-rich JavaScript test framework - [mocha](http://visionmedia.github.io/mocha/)
- 6. Javascript Code Quality Tool - [jshint](http://www.jshint.com/)
- 7. Chai - a BDD / TDD assertion library for node - [chai](http://chaijs.com/)
- 8. JavaScript build tool - [jake](https://github.com/mde/jake)
+
+ Developer dependencies:
+ 1. Mocha - a feature-rich JavaScript test framework - [mocha](http://visionmedia.github.io/mocha/)
+ 2. Javascript Code Quality Tool - [jshint](http://www.jshint.com/)
+ 3. Chai - a BDD / TDD assertion library for node - [chai](http://chaijs.com/)
+ 4. JavaScript build tool - [jake](https://github.com/mde/jake)
 
 # Configuration
-All Configuration is bundled in a single file, namely config/configuration.js. This list will explain the various options. Most things will __not__ need to be modified during development.
+ All Configuration is bundled in a single file, namely config/development.js. This list will explain the various options. Most things will __not__ need to be modified during development.
 
- * **security** it holds the configuration used to encrypt passwords, the module uses [crypto.pbkdf2](http://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback) with salt, iterations and keylen.
-
+* **security** it holds the configuration used to encrypt passwords, the module uses [crypto.pbkdf2](http://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback) with salt, iterations and keylen.
+    * **isLocalStorage** flag indicates whether or not the storage of files will be locally or in s3. If true, then local storage is used, otherwise, Amazon S3 service will be used for storage.
+    * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
 # Dependency External Tools and Softwares Setup
 
  Refer to [Setup Guide](https://github.com/topcoderinc/csfv_frontend_module/wiki/Setup-Guide) wiki page.
+
+### Installing Coverage Tools
+
+1. Download node-js coverage archive from https://github.com/visionmedia/node-jscoverage/zipball/master
+2. Extract archive and run:
+```
+./configure && make && make install
+```
 
 # Local Deployment
 
@@ -45,14 +56,10 @@ All Configuration is bundled in a single file, namely config/configuration.js. T
   npm install
 ```
 
-3. Install jake
+3. Run tests
 ```
-  npm install jake
-```
-
-4. Run tests
-```
-  jake
+chmod +x jake.sh
+./jake.sh
 ```
 
 
