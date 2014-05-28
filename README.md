@@ -32,35 +32,35 @@ In config/development.js we have security options which are the only ones being 
 
 * **security** it holds the configuration used to encrypt passwords, the module uses [crypto.pbkdf2](http://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_callback) with salt, iterations and keylen.
 
-* ***security.iterations*** (positive integer - ussually set to 100)
-* ***security.keylen*** (positive integer - in most cases set to 16)
-* ***security.salt***
+  * ***security.iterations*** (positive integer - ussually set to 100)
+  * ***security.keylen*** (positive integer - in most cases set to 16)
+  * ***security.salt***
 
 * **isLocalStorage** flag (true or false - default: false) indicates whether or not the storage of files will be locally or in s3. If true, then local storage is used, otherwise, Amazon S3 service will be used for storage.
 
 * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
 file:///C:/Users/muhamed.halilovic/Downloads/submission-181033-Readme.md
 
-* ***accessKeyId*** - example: 	accessKeyId: "xxx",
-* ***acl*** - example: 	acl: "public-read"
-* ***awsAccountId*** - example: 	awsAccountId: "xxx",
-* ***bucketName*** - example: 	bucketName: "verigames",
-* ***region*** - example: 	region: "US_EAST_1",
-* ***secretAccessKey*** - example: 	secretAccessKey: "xxx",
+  * ***accessKeyId*** - example: 	accessKeyId: "xxx",
+  * ***acl*** - example: 	acl: "public-read"
+  * ***awsAccountId*** - example: 	awsAccountId: "xxx",
+  * ***bucketName*** - example: 	bucketName: "verigames",
+  * ***region*** - example: 	region: "US_EAST_1",
+  * ***secretAccessKey*** - example: 	secretAccessKey: "xxx",
 
 Other notable options that can or need to be provided when certain functionalities of the module are used are as follows:
 
 * **/services/cache.js** - Improtant when using caching and memcache options - following additional options are present:
-* ***memcacheHost*** - host ip address - in most cases should be set to "localhost"
-* ***memcachePort*** // available port numbers 0-65,535 (In most cases should be set to: 11211)
-* ***memcacheLifetime*** - // memcacheLifetime - positive integer - can be set to 1, 10, etc. - shouldn't be set too high as there is no eviction logic on update
+  * ***memcacheHost*** - host ip address - in most cases should be set to "localhost"
+  * ***memcachePort*** // available port numbers 0-65,535 (In most cases should be set to: 11211)
+  * ***memcacheLifetime*** - // memcacheLifetime - positive integer - can be set to 1, 10, etc. - shouldn't be set too high as there is no eviction logic on update
 
 * **/services/FunctionUtility.js** - following options are present:
-* ***cacheEnabled*** // flag, default - true - used weather to enable or disable cache implementation verification
+  * ***cacheEnabled*** // flag, default - true - used weather to enable or disable cache implementation verification
 
 * **/services/LocalStorageUploadMiddleware.js** - following options are present:
-* ***concurrency*** - number of concurrent tasks - defaults to 3 if not set
-* ***uploadPath*** - path to where the upload should occur - defaults to ./uploads/
+  * ***concurrency*** - number of concurrent tasks - defaults to 3 if not set
+  * ***uploadPath*** - path to where the upload should occur - defaults to ./uploads/
 
 # Dependency External Tools and Softwares Setup
 
