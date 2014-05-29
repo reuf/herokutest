@@ -49,16 +49,10 @@ file:///C:/Users/muhamed.halilovic/Downloads/submission-181033-Readme.md
   * ***secretAccessKey*** - example: secretAccessKey: "xxx",
 
 Other notable options that can or need to be provided when certain functionalities of the module are used are as follows:
-
-* **/services/cache.js** - Improtant when using caching and memcache options - following additional options are present:
   * ***memcacheHost*** - host ip address - in most cases should be set to "localhost"
   * ***memcachePort*** - available port numbers 0-65,535 (In most cases should be set to: 11211)
   * ***memcacheLifetime*** - memcacheLifetime - positive integer - can be set to 1, 10, etc. - shouldn't be set too high as there is no eviction logic on update
-
-* **/services/FunctionUtility.js** - following options are present:
   * ***cacheEnabled*** - flag, default - true - used weather to enable or disable cache implementation verification
-
-* **/services/LocalStorageUploadMiddleware.js** - following options are present:
   * ***concurrency*** - number of concurrent tasks - defaults to 3 if not set
   * ***uploadPath*** - path to where the upload should occur - defaults to ./uploads/
 
