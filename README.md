@@ -41,7 +41,7 @@ In config/development.js we have security options which are the only ones being 
 * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
 file:///C:/Users/muhamed.halilovic/Downloads/submission-181033-Readme.md
 
-Middleware Options are as follows:
+  Middleware Options are as follows:
 
   * ***accessKeyId*** - Required. - Specify your Amazon Access Key ID here.
   * ***acl*** - Default: 'private' - Provide the canned Access Control List you want each uploaded file to. e.g. - Valid values: private | public-read | public-read-write | authenticated-read | bucket-owner-read | bucket-owner-full-control - (See http://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUT.html for the latest list.)
