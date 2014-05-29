@@ -74,26 +74,26 @@ Other notable options that can or need to be provided when certain functionaliti
 
 # Local Deployment
 
-1. Checkout csfv_utilities_module code
+Checkout csfv_utilities_module code
 ```
   git clone git@github.com:topcoderinc/csfv_utilities_module.git
 ```
-2. Install dependencies
+Install dependencies
 ```
   npm install
 ```
 
-3. Run linter
+Run linter
 ```
 jake lint
 ```
 
-4. Run tests:
+Run tests:
 ```
 jake test
 ```
 
-5. Run coverage:
+Run coverage:
 ```
 jake coverage
 ```
