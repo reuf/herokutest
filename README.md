@@ -41,12 +41,16 @@ In config/development.js we have security options which are the only ones being 
 * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
 file:///C:/Users/muhamed.halilovic/Downloads/submission-181033-Readme.md
 
-  * ***accessKeyId*** - example: accessKeyId: "xxx",
-  * ***acl*** - example: acl: "public-read"
-  * ***awsAccountId*** - example: awsAccountId: "xxx",
-  * ***bucketName*** - example: bucketName: "verigames",
-  * ***region*** - example: region: "US_EAST_1",
-  * ***secretAccessKey*** - example: secretAccessKey: "xxx",
+  * ***accessKeyId*** - Required. - Specify your Amazon Access Key ID here.
+  * ***acl*** - Default: 'private' - Provide the canned Access Control List you want each uploaded file to. e.g. - Valid values: private | public-read | public-read-write | authenticated-read | bucket-owner-read | bucket-owner-full-control - (See http://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUT.html for the latest list.)
+  * ***awsAccountId*** - Required. - Specify your Amazon Account Id here.
+  * ***bucketName*** - Required. - Specify the bucket name to put each file into.
+  * ***cacheControl*** - Provide a 'cacheControl' so you can specify caching on the uploaded files. - (See http://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUT.html
+for the latest list.)
+  * ***concurrency*** - Default: 3 - Shows how many files to upload in parrallel.
+  * ***region*** - Required. - Specify which region your bucket is in.
+  * ***secretAccessKey*** - Required. - Specify your Amazon Secret Access Key here.
+  * ***storageClass*** - Default: 'STANDARD' - If you don't provide the 'storageClass', then your object will be stored as normal using the 'STANDARD' storage class. If you do, you should set it to 'REDUCED_REDUNDANCY' and your object will be stored as that.
 
 Other notable options that can or need to be provided when certain functionalities of the module are used are as follows:
   * ***memcacheHost*** - host ip address - in most cases should be set to "localhost"
