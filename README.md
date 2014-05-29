@@ -41,22 +41,22 @@ In config/development.js we have security options which are the only ones being 
 * *s3* the Amazon S3 configurations used to access Amazon S3 Puckets, used by connect-stream-s3 module, refer to [their documentation](https://github.com/appsattic/connect-stream-s3#middleware-options) for more information.
 file:///C:/Users/muhamed.halilovic/Downloads/submission-181033-Readme.md
 
-  * ***accessKeyId*** - example: 	accessKeyId: "xxx",
-  * ***acl*** - example: 	acl: "public-read"
-  * ***awsAccountId*** - example: 	awsAccountId: "xxx",
-  * ***bucketName*** - example: 	bucketName: "verigames",
-  * ***region*** - example: 	region: "US_EAST_1",
-  * ***secretAccessKey*** - example: 	secretAccessKey: "xxx",
+  * ***accessKeyId*** - example: accessKeyId: "xxx",
+  * ***acl*** - example: acl: "public-read"
+  * ***awsAccountId*** - example: awsAccountId: "xxx",
+  * ***bucketName*** - example: bucketName: "verigames",
+  * ***region*** - example: region: "US_EAST_1",
+  * ***secretAccessKey*** - example: secretAccessKey: "xxx",
 
 Other notable options that can or need to be provided when certain functionalities of the module are used are as follows:
 
 * **/services/cache.js** - Improtant when using caching and memcache options - following additional options are present:
   * ***memcacheHost*** - host ip address - in most cases should be set to "localhost"
-  * ***memcachePort*** // available port numbers 0-65,535 (In most cases should be set to: 11211)
-  * ***memcacheLifetime*** - // memcacheLifetime - positive integer - can be set to 1, 10, etc. - shouldn't be set too high as there is no eviction logic on update
+  * ***memcachePort*** - available port numbers 0-65,535 (In most cases should be set to: 11211)
+  * ***memcacheLifetime*** - memcacheLifetime - positive integer - can be set to 1, 10, etc. - shouldn't be set too high as there is no eviction logic on update
 
 * **/services/FunctionUtility.js** - following options are present:
-  * ***cacheEnabled*** // flag, default - true - used weather to enable or disable cache implementation verification
+  * ***cacheEnabled*** - flag, default - true - used weather to enable or disable cache implementation verification
 
 * **/services/LocalStorageUploadMiddleware.js** - following options are present:
   * ***concurrency*** - number of concurrent tasks - defaults to 3 if not set
@@ -97,5 +97,5 @@ jake test
 
 5. Run coverage:
 ```
-jake lint
+jake coverage
 ```
