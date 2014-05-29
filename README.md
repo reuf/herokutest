@@ -34,7 +34,7 @@ In config/development.js we have security options which are the only ones being 
 
   * ***security.iterations*** (positive integer - ussually set to 100)
   * ***security.keylen*** (positive integer - in most cases set to 16)
-  * ***security.salt***
+  * ***security.salt*** (random data that is used as an additional input to a one-way function that hashes a password or passphrase)
 
 * **isLocalStorage** flag (true or false - default: false) indicates whether or not the storage of files will be locally or in s3. If true, then local storage is used, otherwise, Amazon S3 service will be used for storage.
 
